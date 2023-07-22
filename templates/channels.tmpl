@@ -1,0 +1,15 @@
+{{ define "channels" }}
+<div id="channels">
+<form data-hx-post="/channels" data-hx-target="#channels">
+<input id="Name" name="Name" type="text">
+<button>Add</button>
+</form>
+<ul>
+{{ range .channels}}
+<li>
+{{ .Name }}
+</li>
+{{ end }}
+</ul>
+</div>
+{{ end }} 
